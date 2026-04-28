@@ -26,6 +26,8 @@ interface Step4Props {
     setExampleType: (v: any) => void;
     setShowExampleModal: (v: boolean) => void;
     isNewEntry?: boolean;
+    // [구독 모드] 야사장 구독 플랜에서 자동 결정된 tier (Step4는 별도 결제)
+    subscriptionTier?: string | null;
 }
 
 export const Step4Extras: React.FC<Step4Props> = ({
@@ -34,7 +36,7 @@ export const Step4Extras: React.FC<Step4Props> = ({
     selectedHighlighter, setSelectedHighlighter, highlighterPeriod, setHighlighterPeriod,
     selectedKeywords, setSelectedKeywords,
     selectedAdProduct, setExampleType, setShowExampleModal,
-    isNewEntry
+    isNewEntry, subscriptionTier
 }) => {
     const checkStep3 = () => {
         if (!selectedAdProduct) {
@@ -148,10 +150,17 @@ export const Step4Extras: React.FC<Step4Props> = ({
                             </div>
                         </div>
                     </div>
-                    <div className="bg-black/30 px-4 py-2 rounded-full border border-white/20 mx-auto md:mx-0 flex items-center justify-center w-fit">
-                        <span className="text-[10px] md:text-xs font-black tracking-widest text-[#e9d5ff]">SELECTION OPTIONS</span>
-                        <span className="text-white font-black text-xs md:text-sm ml-2">선택 시 추가 비용 발생</span>
-                    </div>
+                    {subscriptionTier ? (
+                        <div className="bg-amber-500/20 px-4 py-2 rounded-full border border-amber-400/50 mx-auto md:mx-0 flex items-center justify-center gap-2 w-fit">
+                            <span className="text-[9px] md:text-[11px] font-black bg-amber-500 text-white px-2 py-0.5 rounded-full">별도 결제</span>
+                            <span className="text-amber-200 font-black text-xs md:text-sm">구독과 별개로 추가 비용 발생</span>
+                        </div>
+                    ) : (
+                        <div className="bg-black/30 px-4 py-2 rounded-full border border-white/20 mx-auto md:mx-0 flex items-center justify-center w-fit">
+                            <span className="text-[10px] md:text-xs font-black tracking-widest text-[#e9d5ff]">SELECTION OPTIONS</span>
+                            <span className="text-white font-black text-xs md:text-sm ml-2">선택 시 추가 비용 발생</span>
+                        </div>
+                    )}
                 </div>
             </div>
 
