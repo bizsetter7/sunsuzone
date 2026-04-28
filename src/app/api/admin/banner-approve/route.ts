@@ -79,6 +79,7 @@ export async function POST(request: NextRequest) {
                     : `'${adName}' 배너 이미지가 반려되었습니다. ${rejectReason ? `사유: ${rejectReason}` : '다시 업로드해 주세요.'}`,
                 read: false,
                 link: '/my-shop?view=dashboard',
+                platform: 'sunsuzone', // [Phase 6] 선수존 알림
                 created_at: nowIso,
             });
         }

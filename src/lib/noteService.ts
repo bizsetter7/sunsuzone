@@ -32,7 +32,8 @@ export const NoteService = {
     getInbox: async (userName: string, userId?: string): Promise<Note[]> => {
         let query = supabase
             .from('messages')
-            .select('*');
+            .select('*')
+            .eq('platform', 'sunsuzone'); // [Phase 6] 선수존 메시지만
 
         const ADMIN_ALIASES = ['시스템 관리자', '운영자', '관리자', 'admin', '마스터관리자', 'admin_user'];
 
@@ -67,6 +68,7 @@ export const NoteService = {
         const { data, error } = await supabase
             .from('messages')
             .select('*')
+            .eq('platform', 'sunsuzone') // [Phase 6] 선수존 메시지만
             .eq('receiver_id', userId)
             .order('created_at', { ascending: false });
 
@@ -89,7 +91,8 @@ export const NoteService = {
     getUnread: async (userName: string, userId?: string): Promise<Note[]> => {
         let query = supabase
             .from('messages')
-            .select('*');
+            .select('*')
+            .eq('platform', 'sunsuzone'); // [Phase 6] 선수존 메시지만
 
         const ADMIN_ALIASES = ['시스템 관리자', '운영자', '관리자', 'admin', '마스터관리자', 'admin_user'];
 
@@ -120,7 +123,8 @@ export const NoteService = {
     getSent: async (userName: string): Promise<Note[]> => {
         let query = supabase
             .from('messages')
-            .select('*');
+            .select('*')
+            .eq('platform', 'sunsuzone'); // [Phase 6] 선수존 메시지만
 
         const ADMIN_ALIASES = ['시스템 관리자', '운영자', '관리자', 'admin', '마스터관리자', 'admin_user'];
 
@@ -149,7 +153,8 @@ export const NoteService = {
             sender_name: senderName,
             receiver_name: receiverName,
             content: content,
-            is_read: false
+            is_read: false,
+            platform: 'sunsuzone', // [Phase 6] 선수존 메시지 태깅
         };
         if (senderId) payload.sender_id = senderId;
         if (receiverId) payload.receiver_id = receiverId;

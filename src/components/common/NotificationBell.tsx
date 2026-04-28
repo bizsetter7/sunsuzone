@@ -31,6 +31,7 @@ export function NotificationBell() {
             .from('notifications')
             .select('*')
             .eq('user_id', user.id)
+            .eq('platform', 'sunsuzone') // [Phase 6] 선수존 알림만
             .order('created_at', { ascending: false })
             .limit(20);
 
