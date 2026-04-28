@@ -53,10 +53,10 @@ export default function CocoGuidePage() {
                     </div>
 
                     {/* Step 2: COMMUNITY / LIST NATIVE Style */}
-                    <div className="relative group bg-amber-50/10 rounded-[28px] p-7 border-2 border-dashed border-amber-200 shadow-[0_10px_30px_-15px_rgba(248,43,96,0.08)] transition-all hover:-translate-y-1">
+                    <div className="relative group bg-amber-50/10 rounded-[28px] p-7 border-2 border-dashed border-amber-200 shadow-[0_10px_30px_-15px_rgba(212,175,55,0.12)] transition-all hover:-translate-y-1">
                         <div className="flex flex-col items-center text-center">
                             <span className="text-[10px] md:text-[11px] font-[900] text-[#D4AF37] uppercase tracking-[0.1em] mb-4">Community / List Native</span>
-                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-[#D4AF37] mb-5 shadow-lg shadow-rose-500/5 ring-4 ring-amber-50">
+                            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-[#D4AF37] mb-5 shadow-lg shadow-amber-900/5 ring-4 ring-amber-50">
                                 <Sparkles size={28} fill="currentColor" />
                             </div>
                             <h2 className="text-xl md:text-xl font-black text-slate-900 mb-4 tracking-tight">통합 커뮤니티 활용</h2>
@@ -94,7 +94,7 @@ export default function CocoGuidePage() {
                     </h3>
                     <button
                         onClick={handleStart}
-                        className="group flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b8922e] text-white font-black px-10 md:px-14 py-4 md:py-5 rounded-full text-lg md:text-xl transition-all hover:-translate-y-1 active:scale-95 shadow-xl shadow-rose-500/20"
+                        className="group flex items-center gap-3 bg-[#D4AF37] hover:bg-[#b8922e] text-white font-black px-10 md:px-14 py-4 md:py-5 rounded-full text-lg md:text-xl transition-all hover:-translate-y-1 active:scale-95 shadow-xl shadow-amber-900/20"
                     >
                         시작하기 <ChevronRight size={24} strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />
                     </button>

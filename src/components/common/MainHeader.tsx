@@ -200,7 +200,7 @@ function MainHeaderContent({ showBackButton, title: propTitle }: MainHeaderProps
                                     e.stopPropagation();
                                     isRegistration ? router.push('/my-shop') : router.push('/');
                                 }}
-                                className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
+                                className="p-1 hover:bg-white/20 rounded-full text-white"
                             >
                                 <ChevronLeft size={24} />
                             </div>
