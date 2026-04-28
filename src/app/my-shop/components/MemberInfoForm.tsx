@@ -35,8 +35,8 @@ export const MemberInfoForm = ({ brand, setView, onOpenMenu, shopName }: any) =>
     });
 
 
-    // 아이디 = email 에서 @sunsujone.kr 앞 부분
-    const username = user?.email?.replace('@sunsujone.kr', '') || user?.name || '';
+    // 아이디 = email 에서 @sunsuzone.kr 앞 부분
+    const username = user?.email?.replace('@sunsuzone.kr', '') || user?.name || '';
 
     useEffect(() => {
         if (!user?.id || user.id === 'guest') {

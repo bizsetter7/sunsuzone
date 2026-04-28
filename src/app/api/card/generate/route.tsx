@@ -145,7 +145,7 @@ function BottomBar({ bg, textColor }: { bg: string; textColor: string }) {
     return (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '14px 32px', backgroundColor: bg }}>
             <span style={{ fontSize: 19, color: textColor, fontWeight: 700 }}>
-                남성선수 구인구직 1위 선수존 www.sunsujone.kr
+                남성선수 구인구직 1위 선수존 www.sunsuzone.kr
             </span>
         </div>
     );
@@ -231,7 +231,7 @@ function renderCard(data: CardData, template: string, bgKey: string) {
         ? { display: 'flex', flexDirection: 'column', width: W, height: H, backgroundImage: bgDef.grad }
         : { display: 'flex', flexDirection: 'column', width: W, height: H, backgroundColor: bgDef.bg ?? '#FFFFFF' };
 
-    const WATERMARK = '남성선수 구인구직 1위 선수존 www.sunsujone.kr';
+    const WATERMARK = '남성선수 구인구직 1위 선수존 www.sunsuzone.kr';
 
     // 지역 한 줄 표시 (region · subRegion)
     const regionLine = data.region + (data.subRegion ? ` · ${data.subRegion}` : '');
@@ -332,7 +332,7 @@ function renderCard(data: CardData, template: string, bgKey: string) {
     if (template === 'C') {
         return (
             <div style={rootStyle}>
-                <TopBar bg={GOLD} text="[ 남성선수 구인구직 1위 선수존 www.sunsujone.kr ]" textColor="#1a1a2e" />
+                <TopBar bg={GOLD} text="[ 남성선수 구인구직 1위 선수존 www.sunsuzone.kr ]" textColor="#1a1a2e" />
 
                 {/* 헤더 */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '28px 44px 16px' }}>
@@ -361,7 +361,7 @@ function renderCard(data: CardData, template: string, bgKey: string) {
 
                 <KwRow keywords={data.keywords} pillBg={t.pillBg} textColor={t.textMuted} />
                 <ContactSection sectionBg={t.sectionBg} dividerC={t.dividerC} textPrimary={t.textPrimary} textMuted={t.textMuted} />
-                <TopBar bg={GOLD} text="[ 남성선수 구인구직 1위 선수존 www.sunsujone.kr ]" textColor="#1a1a2e" />
+                <TopBar bg={GOLD} text="[ 남성선수 구인구직 1위 선수존 www.sunsuzone.kr ]" textColor="#1a1a2e" />
             </div>
         );
     }

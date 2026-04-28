@@ -349,7 +349,7 @@ export const SignupPage = () => {
         try {
             const emailId = role === 'individual' ? iId : cId;
             const pw = role === 'individual' ? iPw : cPw;
-            await signUp(`${emailId}@sunsujone.kr`, pw, {
+            await signUp(`${emailId}@sunsuzone.kr`, pw, {
                 name: role === 'individual' ? iName : cManager,
                 nickname: role === 'individual' ? iNickname : undefined,
                 role,

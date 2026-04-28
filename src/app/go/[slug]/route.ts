@@ -4,7 +4,7 @@
  * X(트위터) 등 SNS에서 한글 URL 인식 불가 문제 해결을 위한
  * 영문 단축 슬러그 → 한글 경로 리디렉트 시스템
  *
- * 사용법: sunsujone.kr/go/gangnam-room → /coco/서울-강남구/호스트바선수
+ * 사용법: sunsuzone.kr/go/gangnam-room → /coco/서울-강남구/호스트바선수
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -137,11 +137,11 @@ export async function GET(
 
     if (!target) {
         // 매핑 없으면 메인 페이지로
-        return NextResponse.redirect(new URL('/', 'https://www.sunsujone.kr'), 302);
+        return NextResponse.redirect(new URL('/', 'https://www.sunsuzone.kr'), 302);
     }
 
     return NextResponse.redirect(
-        new URL(target, 'https://www.sunsujone.kr'),
+        new URL(target, 'https://www.sunsuzone.kr'),
         { status: 301 } // 영구 리디렉트 (SEO 주스 전달)
     );
 }

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsujone.kr';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
     const isCloneSite = siteUrl.includes('d386') || siteUrl.includes('vercel.app');
 
     // d386 복제사이트: 구글 색인 완전 차단 (SEO 중복 페이지 방지)
@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         };
     }
 
-    // 본 사이트(www.sunsujone.kr): 정상 색인 허용
+    // 본 사이트(www.sunsuzone.kr): 정상 색인 허용
     return {
         rules: {
             userAgent: '*',
@@ -34,6 +34,6 @@ export default function robots(): MetadataRoute.Robots {
             `${siteUrl}/image-sitemap.xml`,
         ],
         // AI 검색 최적화 (GEO)
-        // llms.txt: https://www.sunsujone.kr/llms.txt
+        // llms.txt: https://www.sunsuzone.kr/llms.txt
     };
 }

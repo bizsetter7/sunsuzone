@@ -4,7 +4,7 @@
  * ── 최초 1회만 실행하면 됩니다 ──────────────────────────────────────────────
  *
  * STEP 1 — 인증 시작
- *   브라우저에서: https://www.sunsujone.kr/api/admin/band-auth?action=start
+ *   브라우저에서: https://www.sunsuzone.kr/api/admin/band-auth?action=start
  *   → Band 로그인 페이지로 이동
  *   → 로그인 + 권한 허용
  *   → /api/admin/band-auth?action=callback&code=XXX 로 리다이렉트
@@ -16,7 +16,7 @@
  *     BAND_REFRESH_TOKEN = 발급된 refresh_token
  *
  * STEP 3 — 밴드 키 확인
- *   https://www.sunsujone.kr/api/admin/band-auth?action=bands&token=ACCESS_TOKEN
+ *   https://www.sunsuzone.kr/api/admin/band-auth?action=bands&token=ACCESS_TOKEN
  *   → 내 밴드 목록 확인 → band_key 복사 → BAND_KEY 환경변수에 등록
  */
 
@@ -24,7 +24,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { requireAdmin } from '@/lib/requireAdmin';
 import { getBandList } from '@/lib/bandClient';
 
-const REDIRECT_URI = `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.sunsujone.kr'}/api/admin/band-auth?action=callback`;
+const REDIRECT_URI = `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.sunsuzone.kr'}/api/admin/band-auth?action=callback`;
 
 export async function GET(request: NextRequest) {
     const authError = await requireAdmin(request);

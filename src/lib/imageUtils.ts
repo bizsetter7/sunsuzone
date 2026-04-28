@@ -10,7 +10,7 @@
  *   선수존 자동생성: "강남 호스트바선수 월급 350만원 이상 초보환영 채용공고 - 선수존"
  */
 
-const BASE_URL = 'https://www.sunsujone.kr';
+const BASE_URL = 'https://www.sunsuzone.kr';
 
 /** 급여 방식 한글 표시 */
 const PAY_TYPE_LABEL: Record<string, string> = {

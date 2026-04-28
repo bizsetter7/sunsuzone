@@ -404,7 +404,7 @@ async function runHealthCheck(force = false): Promise<any> {
 
     // ── 23. 사이트맵 접근성 ──────────────────────────────────────
     try {
-        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsujone.kr';
+        const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
         const res = await fetch(`${siteUrl}/sitemap.xml`, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
         if (res.ok) {
             components.sitemap_accessible = { status: 'healthy', message: '/sitemap.xml 정상 응답 (200 OK)' };

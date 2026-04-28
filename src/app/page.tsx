@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     '서울선수알바', '인천선수알바', '수원선수알바', '부산선수알바', '대전선수알바',
   ],
   alternates: {
-    canonical: 'https://www.sunsujone.kr',
+    canonical: 'https://www.sunsuzone.kr',
   },
   openGraph: {
     title: '호스트바선수·선수알바·호빠알바·남성유흥알바 1위 선수존',
     description: '전국 호스트바선수·선수알바·남성알바·당일지급 구인정보 No.1 선수존. 20대·30대 남성 환영!',
-    url: 'https://www.sunsujone.kr',
+    url: 'https://www.sunsuzone.kr',
     siteName: '선수존',
   },
 };

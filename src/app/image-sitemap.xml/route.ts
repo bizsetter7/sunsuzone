@@ -14,7 +14,7 @@ import { createClient } from '@supabase/supabase-js';
 
 export const dynamic = 'force-dynamic';
 
-const BASE_URL = 'https://www.sunsujone.kr';
+const BASE_URL = 'https://www.sunsuzone.kr';
 
 const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,

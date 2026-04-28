@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         openGraph: {
             title: `${shop.name} 채용정보 - 선수존`,
             description,
-            url: `https://sunsujone.kr/jobs/${id}`,
+            url: `https://sunsuzone.kr/jobs/${id}`,
             siteName: '선수존',
             type: 'article',
         },
@@ -69,7 +69,7 @@ export default async function JobDetailPage({ params }: Props) {
         "@type": "WebPage",
         "name": `${shop.name} - ${regionName} 채용정보`,
         "description": `${shop.name}에서 ${category} 파트를 채용합니다.`,
-        "url": `https://sunsujone.kr/jobs/${id}`,
+        "url": `https://sunsuzone.kr/jobs/${id}`,
         "publisher": { "@type": "Organization", "name": "선수존" }
     };
 
@@ -77,9 +77,9 @@ export default async function JobDetailPage({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://sunsujone.kr" },
-            { "@type": "ListItem", "position": 2, "name": "채용정보", "item": "https://sunsujone.kr/jobs" },
-            { "@type": "ListItem", "position": 3, "name": `${shop.name} 채용`, "item": `https://sunsujone.kr/jobs/${id}` }
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://sunsuzone.kr" },
+            { "@type": "ListItem", "position": 2, "name": "채용정보", "item": "https://sunsuzone.kr/jobs" },
+            { "@type": "ListItem", "position": 3, "name": `${shop.name} 채용`, "item": `https://sunsuzone.kr/jobs/${id}` }
         ]
     };
 
@@ -100,7 +100,7 @@ export default async function JobDetailPage({ params }: Props) {
         "hiringOrganization": {
             "@type": "Organization",
             "name": "SUNSUJONE",
-            "sameAs": "https://sunsujone.kr"
+            "sameAs": "https://sunsuzone.kr"
         },
         "jobLocation": {
             "@type": "Place",

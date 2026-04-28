@@ -51,13 +51,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             openGraph: {
                 title,
                 description,
-                url: `https://www.sunsujone.kr/coco/${encodeURIComponent(decodedRegionSlug)}/${encodeURIComponent(normalizedSlug)}`,
+                url: `https://www.sunsuzone.kr/coco/${encodeURIComponent(decodedRegionSlug)}/${encodeURIComponent(normalizedSlug)}`,
                 siteName: '선수존',
-                images: [{ url: 'https://www.sunsujone.kr/og-image.jpg', width: 1200, height: 630, alt: '선수존' }],
+                images: [{ url: 'https://www.sunsuzone.kr/og-image.jpg', width: 1200, height: 630, alt: '선수존' }],
                 type: 'website',
             },
             alternates: {
-                canonical: `https://www.sunsujone.kr/coco/${encodeURIComponent(decodedRegionSlug)}/${encodeURIComponent(normalizedSlug)}`,
+                canonical: `https://www.sunsuzone.kr/coco/${encodeURIComponent(decodedRegionSlug)}/${encodeURIComponent(normalizedSlug)}`,
             },
         };
     }
@@ -115,7 +115,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         openGraph: {
             title,
             description,
-            url: `https://www.sunsujone.kr/coco/${encodeURIComponent(slugify(shop.region))}/${shop.id}`,
+            url: `https://www.sunsuzone.kr/coco/${encodeURIComponent(slugify(shop.region))}/${shop.id}`,
             images: shop.options?.mediaUrl ? [
                 {
                     url: shop.options.mediaUrl,
@@ -125,7 +125,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                 },
             ] : [
                 {
-                    url: 'https://www.sunsujone.kr/og-image.png',
+                    url: 'https://www.sunsuzone.kr/og-image.png',
                     width: 1200,
                     height: 630,
                     alt: '선수존',
@@ -134,7 +134,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: 'website',
         },
         alternates: {
-            canonical: `https://www.sunsujone.kr/coco/${encodeURIComponent(slugify(shop.region))}/${shop.id}`,
+            canonical: `https://www.sunsuzone.kr/coco/${encodeURIComponent(slugify(shop.region))}/${shop.id}`,
         },
         keywords: [shop.name || '', ...shadowRegionData.keywords, '남성알바', '고수익알바', '당일지급', '야간알바', '텐프로'],
     };
@@ -189,9 +189,9 @@ export default async function ShopDetailPage({ params }: Props) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-                { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.sunsujone.kr' },
-                { '@type': 'ListItem', position: 2, name: `${regionName} 알바`, item: `https://www.sunsujone.kr/coco/${decodedRegionSlug}` },
-                { '@type': 'ListItem', position: 3, name: `${regionName} ${workTypeInfo.name}`, item: `https://www.sunsujone.kr/coco/${decodedRegionSlug}/${normalizedId}` },
+                { '@type': 'ListItem', position: 1, name: '홈', item: 'https://www.sunsuzone.kr' },
+                { '@type': 'ListItem', position: 2, name: `${regionName} 알바`, item: `https://www.sunsuzone.kr/coco/${decodedRegionSlug}` },
+                { '@type': 'ListItem', position: 3, name: `${regionName} ${workTypeInfo.name}`, item: `https://www.sunsuzone.kr/coco/${decodedRegionSlug}/${normalizedId}` },
             ],
         };
 
@@ -316,7 +316,7 @@ export default async function ShopDetailPage({ params }: Props) {
         "hiringOrganization": {
             "@type": "Organization",
             "name": shop.name,
-            "sameAs": `https://www.sunsujone.kr/coco/${slugify(shop.region)}/${shop.id}`
+            "sameAs": `https://www.sunsuzone.kr/coco/${slugify(shop.region)}/${shop.id}`
         },
         "employmentType": employmentType,
         "datePosted": datePosted,

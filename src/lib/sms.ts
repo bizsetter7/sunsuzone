@@ -81,7 +81,7 @@ async function callAligoAPI(
             // • Connection: keep-alive → 재연결 오버헤드 최소화
             // • Content-Type은 FormData가 자동으로 multipart/form-data; boundary=... 설정
             headers: {
-                'User-Agent'   : 'SunSuJone-Marketing/1.0 (Next.js; +https://www.sunsujone.kr)',
+                'User-Agent'   : 'SunSuJone-Marketing/1.0 (Next.js; +https://www.sunsuzone.kr)',
                 'Accept'       : 'application/json, text/plain, */*',
                 'Cache-Control': 'no-store',
                 'Connection'   : 'keep-alive',

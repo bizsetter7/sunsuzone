@@ -8,7 +8,7 @@
  *   3. Band API → 이미지 업로드 → 게시글 작성
  *
  * cron-job.org 설정:
- *   URL: https://www.sunsujone.kr/api/cron/band-post?secret=CRON_SECRET값
+ *   URL: https://www.sunsuzone.kr/api/cron/band-post?secret=CRON_SECRET값
  *   주기: 6시간마다 (하루 4회)
  *
  * 필요 환경변수:
@@ -62,7 +62,7 @@ function buildBandContent(shop: {
     const payStr    = shop.pay && shop.pay !== '면접후결정'
         ? `${shop.pay_type ?? ''} ${Number(String(shop.pay).replace(/[^0-9]/g, '')).toLocaleString()}원+α`
         : '면접 후 결정';
-    const url = `https://www.sunsujone.kr/coco/${encodeURIComponent(region)}/${shop.id}`;
+    const url = `https://www.sunsuzone.kr/coco/${encodeURIComponent(region)}/${shop.id}`;
     const hashtags = buildHashtags(region, workType);
 
     return [
@@ -80,7 +80,7 @@ function buildBandContent(shop: {
         ``,
         `─────────────────`,
         `💎 선수존 | 남성선수 구인구직 전문`,
-        `www.sunsujone.kr`,
+        `www.sunsuzone.kr`,
     ].filter(l => l !== null && l !== undefined).join('\n');
 }
 
@@ -132,7 +132,7 @@ export async function GET(request: NextRequest) {
     }
 
     // 2. 광고 카드 이미지 생성 (/api/card/generate 호출)
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsujone.kr';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
     const cardUrl = `${baseUrl}/api/card/generate?shopId=${shop.id}&template=A&bg=navy`;
 
     let imageBuffer: Buffer;

@@ -66,7 +66,7 @@ export const LayoutWrapper = ({ children, sideAds }: LayoutWrapperProps) => {
             const ref = document.referrer;
             const SEARCH_ENGINES = ['google.', 'naver.com', 'daum.net', 'bing.com', 'yahoo.com', 'zum.com'];
             const isFromSearch = ref !== '' && SEARCH_ENGINES.some(se => ref.includes(se));
-            const isDirectExternal = ref !== '' && !ref.includes('sunsujone.kr') && !ref.includes('localhost');
+            const isDirectExternal = ref !== '' && !ref.includes('sunsuzone.kr') && !ref.includes('localhost');
             if (isFromSearch || isDirectExternal) {
                 const entry = sessionStorage.getItem('external_entry_page');
                 if (!entry) {

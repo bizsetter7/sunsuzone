@@ -79,7 +79,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             setIsLoading(true); // [Safety] 세션이 있으면 프로필 조회 완료 전까지 로딩 상태 유지
             try {
                 const { user: authUser } = session;
-                const MASTER_EMAILS = ['bizsetter7@gmail.com', 'admin@sunsujone.kr'];
+                const MASTER_EMAILS = ['bizsetter7@gmail.com', 'admin@sunsuzone.kr'];
                 const isMasterEmail = authUser.email && MASTER_EMAILS.includes(authUser.email);
 
                 const { data: profile, error: profileError } = await supabase

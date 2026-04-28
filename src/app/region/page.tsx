@@ -7,19 +7,19 @@ import { enrichAdData } from '@/lib/adUtils';
 
 export const dynamic = 'force-dynamic';
 
-const OG_IMAGE = 'https://www.sunsujone.kr/og-image.jpg';
+const OG_IMAGE = 'https://www.sunsuzone.kr/og-image.jpg';
 
 export const metadata: Metadata = {
     title: '지역별 채용 - 1위 남성알바 선수존',
     description: '전국 지역별 남성알바, 호스트바선수, 남성유흥알바, 야간알바 정보. 서울·부산·인천·대구 등 전국 당일지급 고수익 알바.',
     keywords: ['지역별알바', '전국알바', '서울알바', '부산알바', '남성알바', '남성유흥알바', '호스트바선수', '야간알바', '당일지급'],
     alternates: {
-        canonical: 'https://www.sunsujone.kr/region',
+        canonical: 'https://www.sunsuzone.kr/region',
     },
     openGraph: {
         title: '지역별 채용 - 선수존',
         description: '전국 지역별 남성알바, 호스트바선수, 남성유흥알바 정보. 당일지급·숙식제공 보장.',
-        url: 'https://www.sunsujone.kr/region',
+        url: 'https://www.sunsuzone.kr/region',
         siteName: '선수존',
         images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: '선수존 지역별 채용' }],
         type: 'website',

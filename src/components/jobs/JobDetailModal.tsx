@@ -449,7 +449,7 @@ export const JobDetailContent = ({
                             className="prose prose-sm max-w-none text-gray-600 font-medium leading-relaxed break-words prose-img:rounded-2xl prose-img:shadow-sm [&>*:first-child]:mt-0 [&_*]:max-w-full [&_img]:h-auto pt-4 pb-2"
                             dangerouslySetInnerHTML={{
                                 __html: (shop.description || `<p>${shop.name}에서 열정적인 분을 모십니다!</p>`)
-                                    .replace(/foxalba\.com|queenalba\.net|ladyalba\.co\.kr/gi, 'sunsujone.kr')
+                                    .replace(/foxalba\.com|queenalba\.net|ladyalba\.co\.kr/gi, 'sunsuzone.kr')
                                     .replace(/여우알바|퀸알바|레이디알바|악녀알바|버블알바|슈슈알바/g, '선수존')
                             }}
                         />

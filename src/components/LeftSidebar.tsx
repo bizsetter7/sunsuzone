@@ -144,8 +144,8 @@ export default function LeftSidebar({
             }
 
             // 2. Real Supabase Login
-            // 아이디만 입력한 경우 @sunsujone.kr 이메일 형식으로 변환 (LoginPage와 동일한 로직)
-            const email = id.includes('@') ? id : `${id}@sunsujone.kr`;
+            // 아이디만 입력한 경우 @sunsuzone.kr 이메일 형식으로 변환 (LoginPage와 동일한 로직)
+            const email = id.includes('@') ? id : `${id}@sunsuzone.kr`;
             await signIn(email, pw);
             clearLoginForm();
         } catch (err: unknown) {
@@ -368,7 +368,7 @@ export default function LeftSidebar({
                             ].map((link) => (
                                 <button
                                     key={link.slug}
-                                    onClick={() => window.open(`https://region.sunsujone.kr/${link.slug}/`, '_blank')}
+                                    onClick={() => window.open(`https://region.sunsuzone.kr/${link.slug}/`, '_blank')}
                                     className="px-2 py-1 bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded text-[9px] font-black hover:bg-purple-600 hover:text-white transition-all border border-purple-100 dark:border-purple-800"
                                 >
                                     {link.label}

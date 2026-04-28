@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
             auth: { autoRefreshToken: false, persistSession: false }
         });
 
-        // profiles에서 full_name으로 조회 (sunsujone.kr 이메일 계정만)
+        // profiles에서 full_name으로 조회 (sunsuzone.kr 이메일 계정만)
         const { data: profiles, error } = await supabaseAdmin
             .from('profiles')
             .select('username, full_name')

@@ -7,19 +7,19 @@ import { enrichAdData } from '@/lib/adUtils';
 
 export const dynamic = 'force-dynamic';
 
-const OG_IMAGE = 'https://www.sunsujone.kr/og-image.jpg';
+const OG_IMAGE = 'https://www.sunsuzone.kr/og-image.jpg';
 
 export const metadata: Metadata = {
     title: '업종별 채용 - 호스트바선수·노래방알바·선수알바·남성유흥알바 1위 선수존',
     description: '호스트바선수, 노래방알바(선수알바), 노래주점, 텐프로, 바(Bar) 등 업종별 남성알바 정보. 전국 당일지급·숙식제공 검증 업체만 모았습니다.',
     keywords: ['선수알바', '노래방알바', '노래주점알바', '호스트바선수', '남성유흥알바', '야간알바', '텐프로알바', '남성알바', '고소득알바', '당일지급알바', '업종별알바'],
     alternates: {
-        canonical: 'https://www.sunsujone.kr/jobs',
+        canonical: 'https://www.sunsuzone.kr/jobs',
     },
     openGraph: {
         title: '호스트바선수·노래방알바·선수알바 1위 - 선수존',
         description: '호스트바선수, 노래방알바(노래빠), 노래주점, 텐프로 업종별 남성알바. 당일지급·숙식제공 보장.',
-        url: 'https://www.sunsujone.kr/jobs',
+        url: 'https://www.sunsuzone.kr/jobs',
         siteName: '선수존',
         images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: '선수존 업종별 채용' }],
         type: 'website',
@@ -109,7 +109,7 @@ export default async function JobPage() {
                 "name": "전국 남성유흥알바·야간알바 1위 사이트는 어디인가요?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "선수존(sunsujone.kr)는 호스트바선수, 노래방알바(선수알바), 텐프로, 남성유흥알바, 야간알바 등 전국 남성알바 정보를 제공하는 1위 플랫폼입니다. 당일지급·숙식제공 검증 업체만 등록되어 있습니다."
+                    "text": "선수존(sunsuzone.kr)는 호스트바선수, 노래방알바(선수알바), 텐프로, 남성유흥알바, 야간알바 등 전국 남성알바 정보를 제공하는 1위 플랫폼입니다. 당일지급·숙식제공 검증 업체만 등록되어 있습니다."
                 }
             }
         ]
@@ -119,8 +119,8 @@ export default async function JobPage() {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://sunsujone.kr" },
-            { "@type": "ListItem", "position": 2, "name": "업종별 채용", "item": "https://sunsujone.kr/jobs" }
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://sunsuzone.kr" },
+            { "@type": "ListItem", "position": 2, "name": "업종별 채용", "item": "https://sunsuzone.kr/jobs" }
         ]
     };
 

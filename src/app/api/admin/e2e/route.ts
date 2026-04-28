@@ -337,7 +337,7 @@ export async function POST(request: NextRequest) {
     const authError = await requireAdmin(request);
     if (authError) return authError;
 
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsujone.kr';
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
 
     try {
         // 모든 그룹 순차 실행 (동시 접속 부하 방지)

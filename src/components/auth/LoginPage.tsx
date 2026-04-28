@@ -27,8 +27,8 @@ export const LoginPage = () => {
             // 1. Real Supabase Login (실제 서비스 모드: 하드코딩 테스트 계정 우회 제거)
             // 이제 admin_user 등도 실제 DB비밀번호를 검증하도록 직결됨
             // 2. Real Supabase Login
-            // 아이디만 입력한 경우 @sunsujone.kr 이메일 형식으로 변환
-            const email = id.includes('@') ? id : `${id}@sunsujone.kr`;
+            // 아이디만 입력한 경우 @sunsuzone.kr 이메일 형식으로 변환
+            const email = id.includes('@') ? id : `${id}@sunsuzone.kr`;
             const authResult = await signIn(email, pw);
             // [Fix] 로그인 성공 시 기존의 모든 시뮬레이션 모드 초기화 (어드민 진입 보장)
             if (typeof window !== 'undefined') {
@@ -45,7 +45,7 @@ export const LoginPage = () => {
                 const { data: { session: currentSession } } = await sharedSupabase.auth.getSession();
                 
                 // [Fix] 하드코딩된 마스터 어드민 이메일 체크 (비상구)
-                const MASTER_EMAILS = ['bizsetter7@gmail.com', 'admin@sunsujone.kr'];
+                const MASTER_EMAILS = ['bizsetter7@gmail.com', 'admin@sunsuzone.kr'];
                 const isMasterEmail = currentSession?.user?.email && MASTER_EMAILS.includes(currentSession.user.email);
 
                 const { data: profile } = await sharedSupabase

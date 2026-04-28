@@ -25,7 +25,7 @@ import { AUDIT_MODE } from "@/lib/brand-config";
  */
 export async function generateMetadata(): Promise<Metadata> {
   const isAuditMode = AUDIT_MODE;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsujone.kr';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
   const isCloneSite = siteUrl.includes('d386') || (siteUrl.includes('vercel.app') && !siteUrl.includes('sunsujone'));
 
   // d386 복제사이트: 구글 색인 원천 차단 + 본 사이트로 canonical 지정
@@ -38,13 +38,13 @@ export async function generateMetadata(): Promise<Metadata> {
         googleBot: { index: false, follow: false },
       },
       alternates: {
-        canonical: 'https://www.sunsujone.kr',
+        canonical: 'https://www.sunsuzone.kr',
       },
     };
   }
 
   const seoConfig = getCurrentSEO();
-  const ogImage = 'https://www.sunsujone.kr/og-image.jpg';
+  const ogImage = 'https://www.sunsuzone.kr/og-image.jpg';
   const safeSiteUrl = siteUrl.startsWith('http') ? siteUrl : `https://${siteUrl}`;
   
   // [Safety] metadataBase Stringify — Next.js 14+ 런타임 안정성 확보
@@ -52,7 +52,7 @@ export async function generateMetadata(): Promise<Metadata> {
   try {
     metadataBase = new URL(safeSiteUrl);
   } catch (e) {
-    metadataBase = new URL('https://www.sunsujone.kr');
+    metadataBase = new URL('https://www.sunsuzone.kr');
   }
 
   // [Safety] SEO Config Null Check
@@ -171,12 +171,12 @@ export default function RootLayout({
               "@type": "WebSite",
               "name": "선수존",
               "alternateName": "SUNSUJONE",
-              "url": "https://www.sunsujone.kr",
+              "url": "https://www.sunsuzone.kr",
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": "https://www.sunsujone.kr/jobs?q={search_term_string}"
+                  "urlTemplate": "https://www.sunsuzone.kr/jobs?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
               }

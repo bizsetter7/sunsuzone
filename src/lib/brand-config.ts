@@ -47,9 +47,9 @@ export const BRANDS: Record<string, BrandConfig> = {
     coco: {
         id: 'coco',
         name: '선수존',
-        domain: 'sunsujone.kr',
+        domain: 'sunsuzone.kr',
         primaryColor: '#D4AF37',
-        logoText: 'SUNSUJONE',
+        logoText: 'SUNSUZONE',
         displayName: '선수존',
         tagline: '대한민국 1등 선수(호스트) 전문 구인 플랫폼',
         theme: 'dark',

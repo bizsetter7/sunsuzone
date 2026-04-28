@@ -68,7 +68,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         openGraph: {
             title,
             description,
-            url: `https://sunsujone.kr/community/${id}`,
+            url: `https://sunsuzone.kr/community/${id}`,
             siteName: '선수존',
             type: 'article',
         },

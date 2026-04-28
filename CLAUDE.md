@@ -7,7 +7,7 @@
 
 | 항목 | 내용 |
 |------|------|
-| 도메인 | https://www.sunsujone.kr |
+| 도메인 | https://www.sunsuzone.kr |
 | Vercel 프로젝트 | sunsujone (choco org) |
 | GitHub | https://github.com/bizsetter7/sunsujone |
 | Supabase | P2와 공유 (ronqwailyistjuyolmyh) |
@@ -48,7 +48,7 @@
 
 | 구분 | P2 코코알바 | P10 선수존 |
 |------|------------|-----------|
-| 도메인 | cocoalba.kr | sunsujone.kr |
+| 도메인 | cocoalba.kr | sunsuzone.kr |
 | 브랜드 컬러 | 핑크 | 골드 |
 | 타겟 | 여성알바 (유흥) | 남성 선수 (호스트바 등) |
 | DB | 공유 | 공유 (같은 Supabase) |
@@ -71,7 +71,7 @@
 - [ ] `npx tsc --noEmit` → 에러 0개 확인
 - [ ] `npm run build` → Exit code 0 확인
 - [ ] Git push → Vercel 자동 배포 (~2분)
-- [ ] www.sunsujone.kr 접속 확인
+- [ ] www.sunsuzone.kr 접속 확인
 - [ ] /coco/서울 페이지 확인
 
 ---
@@ -89,7 +89,7 @@
 - P2/P9/P10이 같은 Supabase 프로젝트 사용
 - P10에서 보이는 광고는 P2 DB의 광고 (공유)
 - 새 광고는 P2 어드민 또는 야사장(P5)에서 등록
-- Supabase OAuth: sunsujone.kr redirect URL 등록 필요 (미완료)
+- Supabase OAuth: sunsuzone.kr redirect URL 등록 필요 (미완료)
 
 ---
 
@@ -105,10 +105,10 @@
 
 ### 미완료 TODO
 - [ ] 독립 Supabase 프로젝트 분리 (장기 계획)
-- [ ] Supabase OAuth redirect URL: sunsujone.kr 등록
+- [ ] Supabase OAuth redirect URL: sunsuzone.kr 등록
 - [ ] 트위터/X API 환경변수 설정
 - [ ] IndexNow API 키 등록
-- [ ] DNS 전파 완료 후 www.sunsujone.kr 접속 확인
+- [ ] DNS 전파 완료 후 www.sunsuzone.kr 접속 확인
 
 ---
 
@@ -120,7 +120,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=  (P2와 공유)
 SUPABASE_SERVICE_ROLE_KEY=      (P2와 공유)
 CRON_SECRET=                    (크론 보안키)
 NEXT_PUBLIC_SITE_NAME=선수존
-NEXT_PUBLIC_SITE_URL=https://www.sunsujone.kr
+NEXT_PUBLIC_SITE_URL=https://www.sunsuzone.kr
 ```
 
 ---
@@ -131,7 +131,7 @@ NEXT_PUBLIC_SITE_URL=https://www.sunsujone.kr
 - `Shadow_SEO_Master.json`: "선수존 (COCOALBA)" → "선수존"
 - `Footer.tsx`: POPULAR_REGIONS 링크 /sunsu/ → /coco/
 - `page.tsx`: 내부 링크 /sunsu/ → /coco/
-- `TabPolicies.tsx`: sunsujone.co.kr → www.sunsujone.kr
+- `TabPolicies.tsx`: sunsujone.co.kr → www.sunsuzone.kr
 - `work-type-guide.ts`: WorkTypeSlug 타입 완화 → string
 
 ### 안전하게 남겨둔 것 (의도적)
@@ -141,4 +141,4 @@ NEXT_PUBLIC_SITE_URL=https://www.sunsujone.kr
 
 ### 추가 검토 필요
 - `/api/cron/band-post/route.ts`: URL 하드코딩 여부
-- `/api/cron/indexnow/route.ts`: sunsujone.kr URL 확인
+- `/api/cron/indexnow/route.ts`: sunsuzone.kr URL 확인

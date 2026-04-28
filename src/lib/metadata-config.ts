@@ -39,8 +39,8 @@ const BASE_ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "SUNSUJONE (선수존)",
-  "url": "https://sunsujone.kr",
-  "logo": "https://sunsujone.kr/logo.png",
+  "url": "https://sunsuzone.kr",
+  "logo": "https://sunsuzone.kr/logo.png",
   "sameAs": [
       "https://www.facebook.com/sunsujone",
       "https://www.instagram.com/sunsujone"
@@ -98,8 +98,8 @@ const CLEAN_LOCAL_BUSINESS_SCHEMA = {
     "@type": "LocalBusiness",
     "name": "선수존(SUNSUJONE) - 호스트바선수 선수알바 호빠알바 1등 플랫폼",
     "description": "지역 내 검증된 고소득 일자리와 구직자를 안전하게 연결하는 대한민국 대표 선수 전용 채용 플랫폼입니다. 호스트바, 가라오케, 클럽 정보를 실시간 제공합니다.",
-    "url": "https://sunsujone.kr",
-    "image": "https://sunsujone.kr/logo.png"
+    "url": "https://sunsuzone.kr",
+    "image": "https://sunsuzone.kr/logo.png"
 };
 
 const CLEAN_SEO: SEOConfig = {

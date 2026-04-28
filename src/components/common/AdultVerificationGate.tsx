@@ -161,8 +161,8 @@ export const AdultVerificationGate = ({ onVerify, onSkip }: AdultVerificationGat
                 return;
             }
 
-            // 아이디 입력 시 @sunsujone.kr 이메일로 변환 (LoginPage와 동일한 로직)
-            const email = targetId.includes('@') ? targetId : `${targetId}@sunsujone.kr`;
+            // 아이디 입력 시 @sunsuzone.kr 이메일로 변환 (LoginPage와 동일한 로직)
+            const email = targetId.includes('@') ? targetId : `${targetId}@sunsuzone.kr`;
             await signIn(email, pw);
 
             // 회원 유형 불일치 검사 — 불일치 시 로그아웃 후 차단

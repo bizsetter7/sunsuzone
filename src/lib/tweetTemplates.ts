@@ -5,7 +5,7 @@
 import { buildHashtags, formatHashtags } from './snsHashtags';
 import { slugify } from '@/utils/shopUtils';
 
-const BASE_URL = 'https://www.sunsujone.kr';
+const BASE_URL = 'https://www.sunsuzone.kr';
 
 // ─── TYPE_A: 신규 구인 공고 알림 ─────────────────────────────────────────────
 

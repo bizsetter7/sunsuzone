@@ -41,16 +41,16 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         title,
         description,
         alternates: {
-            canonical: `https://www.sunsujone.kr/coco/${encodeURIComponent(decodedRegionSlug)}`,
+            canonical: `https://www.sunsuzone.kr/coco/${encodeURIComponent(decodedRegionSlug)}`,
         },
         openGraph: {
             title,
             description,
-            url: `https://www.sunsujone.kr/coco/${region}`,
+            url: `https://www.sunsuzone.kr/coco/${region}`,
             siteName: '선수존',
             images: [
                 {
-                    url: 'https://www.sunsujone.kr/og-image.png',
+                    url: 'https://www.sunsuzone.kr/og-image.png',
                     width: 1200,
                     height: 630,
                     alt: `${regionName} 여자야간알바 정보`,
@@ -108,8 +108,8 @@ export default async function CocoRegionPage({ params }: { params: Promise<{ reg
         "@type": "WebPage",
         "name": `${regionName} 여자야간알바·여자남성유흥알바 전문 - 선수존`,
         "description": `${regionName} 지역 검증된 ${kw0}, ${kw1} 상세정보를 실시간으로 확인하세요.`,
-        "url": `https://www.sunsujone.kr/coco/${region}`,
-        "publisher": { "@type": "Organization", "name": "선수존", "url": "https://www.sunsujone.kr" }
+        "url": `https://www.sunsuzone.kr/coco/${region}`,
+        "publisher": { "@type": "Organization", "name": "선수존", "url": "https://www.sunsuzone.kr" }
     };
 
     // [JSON-LD 2] BreadcrumbList
@@ -117,9 +117,9 @@ export default async function CocoRegionPage({ params }: { params: Promise<{ reg
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.sunsujone.kr" },
-            { "@type": "ListItem", "position": 2, "name": "지역별 채용", "item": "https://www.sunsujone.kr/region" },
-            { "@type": "ListItem", "position": 3, "name": `${regionName} 채용`, "item": `https://www.sunsujone.kr/coco/${region}` }
+            { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://www.sunsuzone.kr" },
+            { "@type": "ListItem", "position": 2, "name": "지역별 채용", "item": "https://www.sunsuzone.kr/region" },
+            { "@type": "ListItem", "position": 3, "name": `${regionName} 채용`, "item": `https://www.sunsuzone.kr/coco/${region}` }
         ]
     };
 
@@ -200,7 +200,7 @@ export default async function CocoRegionPage({ params }: { params: Promise<{ reg
         "hiringOrganization": {
             "@type": "Organization",
             "name": "SUNSUJONE",
-            "sameAs": "https://sunsujone.kr"
+            "sameAs": "https://sunsuzone.kr"
         },
         "jobLocation": {
             "@type": "Place",

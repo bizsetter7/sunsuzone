@@ -7,14 +7,14 @@ export const metadata: Metadata = {
     description: '전국 고소득 남성알바 인재 정보. 호스트바선수, 노래방알바, 남성유흥알바 구직자들의 이력서를 확인하고 면접 제안을 보내세요. 당일지급 보장 업체 전용 서비스.',
     keywords: ['인재정보', '이력서조회', '남성알바구직', '남성유흥알바인재', '야간알바구직', '호스트바선수인재', '선수존'],
     alternates: {
-        canonical: 'https://www.sunsujone.kr/talent',
+        canonical: 'https://www.sunsuzone.kr/talent',
     },
     openGraph: {
         title: '인재정보(이력서) - 선수존',
         description: '실시간 남성알바 인재 리스트. 사장님을 위한 맞춤형 인력 관리 서비스.',
-        url: 'https://www.sunsujone.kr/talent',
+        url: 'https://www.sunsuzone.kr/talent',
         siteName: '선수존',
-        images: [{ url: 'https://www.sunsujone.kr/og-image.jpg', width: 1200, height: 630 }],
+        images: [{ url: 'https://www.sunsuzone.kr/og-image.jpg', width: 1200, height: 630 }],
         type: 'website',
     },
 };

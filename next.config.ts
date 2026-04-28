@@ -30,8 +30,8 @@ const nextConfig: NextConfig = {
       // [SEO] non-www → www 정규화 (Google 리다이렉션 포함된 페이지 오류 해소)
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'sunsujone.kr' }],
-        destination: 'https://www.sunsujone.kr/:path*',
+        has: [{ type: 'host', value: 'sunsuzone.kr' }],
+        destination: 'https://www.sunsuzone.kr/:path*',
         permanent: true, // 301
       },
     ];

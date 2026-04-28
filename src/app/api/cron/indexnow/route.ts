@@ -22,7 +22,7 @@ import { slugify } from '@/utils/shopUtils';
 
 export const dynamic = 'force-dynamic';
 
-const BASE_URL = 'https://www.sunsujone.kr';
+const BASE_URL = 'https://www.sunsuzone.kr';
 const INDEXNOW_HOST = 'api.indexnow.org';
 
 const supabaseAdmin = createClient(
@@ -81,7 +81,7 @@ export async function GET(request: NextRequest) {
 
         // ── 3. IndexNow API 제출 ───────────────────────────────────────────
         const body = {
-            host:    'www.sunsujone.kr',
+            host:    'www.sunsuzone.kr',
             key:     indexNowKey,
             keyLocation: `${BASE_URL}/${indexNowKey}.txt`,
             urlList: urls,
