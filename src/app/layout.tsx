@@ -26,7 +26,7 @@ import { AUDIT_MODE } from "@/lib/brand-config";
 export async function generateMetadata(): Promise<Metadata> {
   const isAuditMode = AUDIT_MODE;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sunsuzone.kr';
-  const isCloneSite = siteUrl.includes('d386') || (siteUrl.includes('vercel.app') && !siteUrl.includes('sunsujone'));
+  const isCloneSite = siteUrl.includes('d386') || (siteUrl.includes('vercel.app') && !siteUrl.includes('sunsuzone'));
 
   // d386 복제사이트: 구글 색인 원천 차단 + 본 사이트로 canonical 지정
   if (isCloneSite) {
