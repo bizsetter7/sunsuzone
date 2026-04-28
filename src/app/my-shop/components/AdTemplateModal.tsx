@@ -106,7 +106,7 @@ export const AdTemplateModal: React.FC<AdTemplateModalProps> = ({ brand, onClose
                 {/* Header */}
                 <div className="flex items-center justify-between px-8 py-5 border-b border-gray-100 shrink-0 bg-white/50 backdrop-blur-sm z-20">
                     <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-amber-700 flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
+                        <div className="w-12 h-12 rounded-2xl bg-[#D4AF37] flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
                             <Sparkles size={28} />
                         </div>
                         <div>
@@ -264,7 +264,7 @@ export const AdTemplateModal: React.FC<AdTemplateModalProps> = ({ brand, onClose
                                 onApply(renderedHtml);
                                 onClose();
                             }}
-                            className="px-12 py-3.5 rounded-2xl text-sm font-black bg-gradient-to-r from-[#D4AF37] to-amber-700 text-white shadow-2xl shadow-blue-500/40 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2 group"
+                            className="px-12 py-3.5 rounded-2xl text-sm font-black bg-[#D4AF37] text-slate-900 shadow-md shadow-amber-900/20 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2 group"
                         >
                             <Sparkles size={18} className="group-hover:rotate-12 transition-transform" />
                             지금 바로 적용하기

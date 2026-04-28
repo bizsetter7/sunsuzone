@@ -134,21 +134,17 @@ export const Step4Extras: React.FC<Step4Props> = ({
 
     return (
         <section id="myshop-step-4" className={`p-1.5 md:p-5 rounded-[32px] shadow-lg border-2 overflow-hidden ${brand.theme === 'dark' ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-100'}`}>
-            <div className="bg-gradient-to-r from-[#9333ea] via-[#a855f7] to-[#ec4899] text-white p-5 md:p-7 rounded-[24px] mb-6 md:mb-8 shadow-xl relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-2xl group-hover:scale-110 transition-transform duration-700"></div>
-                <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="border-b border-gray-100 pb-5 mb-6 md:mb-8">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-white/30 rounded-2xl flex items-center justify-center border border-white/40 shadow-inner">
-                            <Sparkles size={28} className="text-white animate-pulse" />
-                        </div>
+                        <div className="w-1 h-8 bg-[#D4AF37] rounded-full shrink-0" />
                         <div>
-                            <h2 className="font-black text-xl md:text-2xl tracking-tight flex items-center gap-2">
+                            <h2 className="font-black text-xl md:text-2xl tracking-tight text-gray-900">
                                 STEP 4 : 추가 노출 강조 옵션
                             </h2>
-                            <div className="flex items-center gap-4 mt-1">
-                                <span className="text-yellow-300 font-black text-sm md:text-base animate-bounce">노출 효과의 압도적 극대화!!</span>
-                                <div className="hidden md:block w-px h-4 bg-white/30"></div>
-                                <span className="text-white/80 font-bold text-xs md:text-sm">다양한 옵션으로 시선을 사로 잡으세요!</span>
+                            <div className="flex items-center gap-3 mt-0.5">
+                                <span className="text-[#D4AF37] font-black text-sm">노출 효과의 압도적 극대화!!</span>
+                                <span className="text-gray-500 font-bold text-xs">다양한 옵션으로 시선을 사로 잡으세요!</span>
                             </div>
                         </div>
                     </div>

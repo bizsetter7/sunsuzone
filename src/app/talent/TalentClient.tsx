@@ -176,23 +176,22 @@ export default function TalentPage() {
 
                 {/* [New] Individual Member - Resume Registration CTA */}
                 {userType !== 'corporate' && (
-                    <div className="mb-8 p-6 rounded-[32px] bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600 shadow-xl shadow-purple-100 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-8 opacity-20 rotate-12">
-                            <Sparkles size={120} className="text-white" />
-                        </div>
-                        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
-                            <div>
-                                <h2 className="text-xl md:text-2xl font-black text-white mb-2 leading-tight">
-                                    이력서 등록하고 <br className="md:hidden" />
-                                    <span className="text-yellow-300">포인트 500P </span> 즉시 받기! 🛍️
-                                </h2>
-                                <p className="text-white/80 text-sm font-bold">
-                                    자세한 내용은 마이페이지에서 확인해주세요!
-                                </p>
+                    <div className="mb-8 p-5 md:p-6 rounded-[28px] border border-[#D4AF37]/30 bg-white shadow-sm relative overflow-hidden">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div className="flex items-center gap-3">
+                                <div className="w-1 h-8 bg-[#D4AF37] rounded-full shrink-0" />
+                                <div>
+                                    <h2 className="text-lg md:text-xl font-black text-gray-900 leading-tight">
+                                        이력서 등록하고 <span className="text-[#D4AF37]">포인트 500P</span> 즉시 받기! 🛍️
+                                    </h2>
+                                    <p className="text-gray-500 text-sm font-bold mt-0.5">
+                                        자세한 내용은 마이페이지에서 확인해주세요!
+                                    </p>
+                                </div>
                             </div>
                             <button
                                 onClick={() => router.push('/my-shop?view=resume-form&new=true')}
-                                className="px-8 py-4 bg-white text-purple-700 rounded-2xl font-black text-lg shadow-lg hover:scale-105 active:scale-95 transition-all"
+                                className="shrink-0 px-6 py-3 bg-[#D4AF37] text-slate-900 rounded-xl font-black text-sm shadow-md hover:bg-[#b8922e] transition-colors whitespace-nowrap"
                             >
                                 내 이력서 등록하기
                             </button>
