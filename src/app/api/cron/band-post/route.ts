@@ -79,7 +79,7 @@ function buildBandContent(shop: {
         hashtags,
         ``,
         `─────────────────`,
-        `🍫 선수존 | 여성 유흥 구인구직 전문`,
+        `💎 선수존 | 남성선수 구인구직 전문`,
         `www.sunsujone.kr`,
     ].filter(l => l !== null && l !== undefined).join('\n');
 }

@@ -5,7 +5,7 @@ import CommunityContent from './CommunityContent';
 
 export const metadata: Metadata = {
     title: '커뮤니티 & 후기 - 선수존 (호스트바선수·노래방알바·남성유흥알바·고소득 남성알바 꿀팁)',
-    description: '선수존 커뮤니티 그녀들의수다. 고수익 남성알바, 남성유흥알바, 노래방알바 등의 생생한 후기와 야간알바 정보를 공유하세요.',
+    description: '선수존 커뮤니티 소통방. 호스트바·텐카페·남성선수 알바 생생한 후기와 야간알바 꿀팁을 공유하세요.',
     alternates: {
         canonical: 'https://www.sunsujone.kr/community',
     },

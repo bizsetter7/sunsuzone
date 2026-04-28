@@ -5,7 +5,7 @@
 import { buildHashtags, formatHashtags } from './snsHashtags';
 import { slugify } from '@/utils/shopUtils';
 
-const BASE_URL = 'https://sunsujone.kr';
+const BASE_URL = 'https://www.sunsujone.kr';
 
 // ─── TYPE_A: 신규 구인 공고 알림 ─────────────────────────────────────────────
 
@@ -29,7 +29,7 @@ export function buildNewJobTweet(data: NewJobTweetData): string {
 
     const condStr = conditions.slice(0, 2).join(' · ');
     const hashtags = formatHashtags(buildHashtags(regionSlug, workType));
-    const url = `${BASE_URL}/sunsu/${encodeURIComponent(regionSlug)}/${shopId}`;
+    const url = `${BASE_URL}/coco/${encodeURIComponent(regionSlug)}/${shopId}`;
 
     const lines = [
         `🆕 ${workType} 신규 구인`,
