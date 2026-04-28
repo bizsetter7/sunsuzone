@@ -203,7 +203,7 @@ export const SosAlertView = ({ brand }: { brand: any }) => {
                 </p>
                 <button
                     onClick={() => window.dispatchEvent(new CustomEvent('setView', { detail: 'form' }))}
-                    className="w-full py-3 bg-gradient-to-r from-blue-500 to-rose-600 text-white font-black rounded-2xl shadow-lg hover:brightness-110 transition"
+                    className="w-full py-3 bg-[#D4AF37] text-slate-900 font-black rounded-2xl shadow-lg hover:bg-[#b8922e] transition"
                 >
                     유료공고 등록하러 가기
                 </button>

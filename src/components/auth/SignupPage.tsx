@@ -102,7 +102,7 @@ const AgreementItem = ({
                     style={{ accentColor: 'var(--brand-primary)' }}
                 />
                 <label htmlFor={id} className="flex-1 text-sm font-bold text-gray-800 cursor-pointer">
-                    {required && <span className="text-rose-500 mr-1">[필수]</span>}
+                    {required && <span className="text-[#D4AF37] mr-1">[필수]</span>}
                     {label}
                 </label>
                 {children && (

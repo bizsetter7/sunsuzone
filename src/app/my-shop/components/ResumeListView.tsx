@@ -146,7 +146,7 @@ export const ResumeListView = ({ setView, onShowDetail, authUser }: { setView: (
                     </div>
                     <button
                         onClick={() => setView('resume-form')}
-                        className="bg-[#f82b60] text-white px-4 py-2 rounded-xl text-xs font-black shadow-lg hover:bg-[#db2456] transition whitespace-nowrap"
+                        className="bg-[#D4AF37] text-white px-4 py-2 rounded-xl text-xs font-black shadow-lg hover:bg-[#b8922e] transition whitespace-nowrap"
                     >
                         + 새 이력서 작성
                     </button>

@@ -4,7 +4,7 @@ import React from 'react';
 import { AlertTriangle, Phone, ChevronLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-const HOT_PINK = '#f82b60';
+const HOT_PINK = '#D4AF37';
 
 export default function JobScamNoticePage() {
     const router = useRouter();

@@ -427,7 +427,7 @@ export const OngoingAdsView = ({
                             <List size={32} />
                         </div>
                         <p className="text-gray-400 font-bold">현재 진행 중인 채용정보가 없습니다.</p>
-                        <button onClick={() => setView('form')} className="px-6 py-2.5 bg-[#f82b60] text-white rounded-xl font-black text-sm hover:translate-y-[-2px] transition-transform shadow-lg shadow-rose-200">
+                        <button onClick={() => setView('form')} className="px-6 py-2.5 bg-[#D4AF37] text-white rounded-xl font-black text-sm hover:translate-y-[-2px] transition-transform shadow-lg shadow-amber-200">
                             첫 공고 등록하기
                         </button>
                     </div>

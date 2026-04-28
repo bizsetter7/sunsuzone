@@ -144,7 +144,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                     </div>
                                     <div className="flex justify-between items-center pt-2 border-t border-gray-100 dark:border-gray-800">
                                         <span className="text-xs font-bold text-gray-400">결제 금액</span>
-                                        <span className="text-lg font-black text-rose-600">{currentPkg?.price.toLocaleString()}원</span>
+                                        <span className="text-lg font-black text-[#D4AF37]">{currentPkg?.price.toLocaleString()}원</span>
                                     </div>
                                 </div>
 
@@ -183,7 +183,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                     onClick={() => { setActiveTab('jump'); setSelectedSosId(null); }}
                                     className={`flex-1 flex items-center justify-center gap-2 py-3.5 rounded-[14px] text-sm font-black transition-all ${
                                         activeTab === 'jump'
-                                            ? 'bg-[#0a0a0b] text-rose-500 shadow-lg'
+                                            ? 'bg-[#0a0a0b] text-[#D4AF37] shadow-lg'
                                             : 'text-gray-500 hover:text-gray-700 border border-transparent'
                                     }`}
                                 >
@@ -241,7 +241,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                                             </div>
                                                         </div>
                                                         {pkg.bonus > 0 && (
-                                                            <span className="mb-3 bg-gradient-to-r from-rose-500 to-orange-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-sm animate-bounce">
+                                                            <span className="mb-3 bg-gradient-to-r from-[#D4AF37] to-orange-500 text-white text-[9px] font-black px-2 py-0.5 rounded-full shadow-sm animate-bounce">
                                                                 +{pkg.bonus}% BONUS
                                                             </span>
                                                         )}
@@ -259,7 +259,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                 ) : (
                                     <section className="space-y-4">
                                         <div className="bg-[#0a0a0b] rounded-[32px] p-6 md:p-10 border border-white/5 relative overflow-hidden shadow-2xl">
-                                            <div className="absolute -top-10 -right-10 w-48 h-48 bg-rose-600/10 blur-[80px] rounded-full" />
+                                            <div className="absolute -top-10 -right-10 w-48 h-48 bg-amber-600/10 blur-[80px] rounded-full" />
                                             <div className="relative z-10">
                                                 <div className="mb-6">
                                                     <p className="text-white !text-sm md:!text-sm !font-black leading-tight">
@@ -278,19 +278,19 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                                                 onClick={() => setSelectedJumpId(isSelected ? null : pkg.id)}
                                                                 className={`relative p-5 md:p-8 rounded-2xl border-2 transition-all flex flex-col items-center justify-center text-center ${
                                                                     isSelected
-                                                                        ? 'bg-rose-500/10 border-rose-500 shadow-lg shadow-rose-500/20 scale-[1.02]'
+                                                                        ? 'bg-amber-500/10 border-[#D4AF37] shadow-lg shadow-amber-900/20 scale-[1.02]'
                                                                         : 'bg-white/5 border-transparent hover:bg-white/[0.08] hover:border-white/10'
                                                                 }`}
                                                             >
                                                                 <div className="absolute top-3 right-3">
-                                                                    <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-rose-500 bg-rose-500' : 'border-white/20'}`}>
+                                                                    <div className={`w-4 h-4 rounded-full border-2 flex items-center justify-center ${isSelected ? 'border-[#D4AF37] bg-amber-500' : 'border-white/20'}`}>
                                                                         {isSelected && <Check size={10} className="text-white" />}
                                                                     </div>
                                                                 </div>
                                                                 <p className="text-base md:text-lg font-black text-white mb-1 whitespace-nowrap">
                                                                     {pkg.count.toLocaleString()}회 점프충전
                                                                 </p>
-                                                                <p className={`text-sm md:text-base font-bold ${isSelected ? 'text-rose-400' : 'text-gray-500'}`}>
+                                                                <p className={`text-sm md:text-base font-bold ${isSelected ? 'text-amber-400' : 'text-gray-500'}`}>
                                                                     ({pkg.price.toLocaleString()}원)
                                                                 </p>
                                                             </button>
@@ -307,7 +307,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                 </>
             ) : (
                 <div className="space-y-6 max-w-md mx-auto py-2 animate-in zoom-in-95 duration-300">
-                    <div className="bg-gradient-to-br from-blue-600 to-rose-600 text-white rounded-[28px] p-8 text-center shadow-2xl relative overflow-hidden">
+                    <div className="bg-[#D4AF37] text-white rounded-[28px] p-8 text-center shadow-2xl relative overflow-hidden">
                         <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                             <Check size={28} />
                         </div>
@@ -318,7 +318,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                     <div className="grid grid-cols-2 gap-4">
                         <div className={`p-5 rounded-2xl border text-center ${isDark ? 'bg-gray-900 border-gray-800' : 'bg-gray-50 border-gray-100'}`}>
                             <p className="text-xs font-bold text-gray-400 mb-1">입금 금액</p>
-                            <p className="text-xl font-black text-rose-600">{submittedPkg!.price.toLocaleString()}원</p>
+                            <p className="text-xl font-black text-[#D4AF37]">{submittedPkg!.price.toLocaleString()}원</p>
                         </div>
                         <div className={`p-5 rounded-2xl border text-center ${isDark ? 'bg-gray-900 border-gray-800' : 'bg-gray-50 border-gray-100'}`}>
                             <p className="text-xs font-bold text-gray-400 mb-1">충전 내용</p>
@@ -343,7 +343,7 @@ export function PointShopView({ brand, shopName, userId, onOpenMenu }: PointShop
                                 <span className="font-bold text-gray-400">예금주</span>
                                 <span className="font-black">고남우(초코아이디어)</span>
                             </div>
-                            <p className="text-[10px] md:text-xs font-black text-rose-500 text-right mt-1">※입금시 예금주는 아이디를 기재해주세요.</p>
+                            <p className="text-[10px] md:text-xs font-black text-[#D4AF37] text-right mt-1">※입금시 예금주는 아이디를 기재해주세요.</p>
                         </div>
                     </div>
                 </div>
