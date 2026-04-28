@@ -59,8 +59,8 @@ export const HeroSection = () => {
                     {/* Subtitle */}
                     <div className="flex flex-col items-center">
                         <p className="text-[14px] md:text-lg font-bold text-slate-200 tracking-tight drop-shadow-md leading-[1.6] mb-6 md:mb-8">
-                            <span className="md:hidden">호스트바선수·선수알바·호빠알바·남성남성유흥알바<br />구인구직 1위 플랫폼</span>
-                            <span className="hidden md:inline">호스트바선수·선수알바·호빠알바·남성남성유흥알바 구인구직 1위 플랫폼</span>
+                            <span className="md:hidden">호스트바선수·선수알바·호빠알바·남성유흥알바<br />구인구직 1위 플랫폼</span>
+                            <span className="hidden md:inline">호스트바선수·선수알바·호빠알바·남성유흥알바 구인구직 1위 플랫폼</span>
                         </p>
                         
                         {/* Bottom Divider */}
@@ -89,9 +89,9 @@ export const HeroSection = () => {
                 </div>
             </div>
 
-            {/* Side Accents */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full -mr-64 -mt-64 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-600/10 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none" />
+            {/* Side Accents - Luxury Gold */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-600/10 blur-[120px] rounded-full -mr-64 -mt-64 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-600/10 blur-[100px] rounded-full -ml-40 -mb-40 pointer-events-none" />
 
             <PaymentPopup
                 isOpen={isPaymentPopupOpen}
