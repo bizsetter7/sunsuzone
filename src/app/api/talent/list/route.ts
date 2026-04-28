@@ -18,6 +18,7 @@ export async function GET(request: NextRequest) {
         const { data: resumes, error: resError } = await supabaseAdmin
             .from('resumes')
             .select('*')
+            .eq('platform', 'sunsu') // [Migration 07] 선수존 전용
             .order('created_at', { ascending: false })
             .limit(50);
 

@@ -79,6 +79,7 @@ export default async function CocoRegionPage({ params }: { params: Promise<{ reg
     const { data } = await supabase
         .from('shops')
         .select('*')
+        .eq('platform', 'sunsu') // [Migration 07] 선수존 전용
         .eq('is_closed', false)
         .order('created_at', { ascending: false })
         .limit(500);
