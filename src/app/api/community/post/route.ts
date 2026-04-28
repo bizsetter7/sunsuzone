@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
                 password: body.password || '',
                 is_secret: body.is_secret || false,
                 created_at: new Date().toISOString(),
-                platform: 'sunsu', // [Migration 07] 선수존 게시글
+                platform: 'sunsuzone', // [Migration 07] 선수존 게시글
             }])
             .select()
             .single();
