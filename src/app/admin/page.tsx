@@ -27,7 +27,6 @@ import { AdminPaymentManagement } from '@/components/admin/payment/AdminPaymentM
 import { AdminAdManagement } from '@/components/admin/ad/AdminAdManagement';
 import { BusinessVerifyView } from '@/components/admin/BusinessVerifyView';
 import { AdminApplicationManagement } from '@/components/admin/applications/AdminApplicationManagement';
-import { AdminBannerManagement } from '@/components/admin/banner/AdminBannerManagement';
 import { AdminYasajangManagement } from '@/components/admin/yasajang/AdminYasajangManagement';
 import { useBrand } from '@/components/BrandProvider';
 import { enrichAdData, anyAdToShop } from '@/lib/adUtils';
@@ -51,7 +50,6 @@ function AdminContent() {
     const [realUsers, setRealUsers] = useState<any[]>([]);
     const [payments, setPayments] = useState<any[]>([]);
     const [pendingApplications, setPendingApplications] = useState(0);
-    const [pendingBannerCount, setPendingBannerCount] = useState(0);
     const [pendingYasajangCount, setPendingYasajangCount] = useState(0);
     const [healthIssueCount, setHealthIssueCount] = useState(0);
     const [liveVisitors, setLiveVisitors] = useState<number | null>(null);
@@ -167,14 +165,7 @@ function AdminContent() {
                 .eq('status', 'pending');
             setPendingApplications(appCount || 0);
 
-            // 3-2. Fetch pending banner count
-            const { count: bannerCount } = await supabase
-                .from('shops')
-                .select('id', { count: 'exact', head: true })
-                .eq('banner_status', 'pending_banner');
-            setPendingBannerCount(bannerCount || 0);
-
-            // 3-3. Fetch pending yasajang businesses
+            // 3-2. Fetch pending yasajang businesses
             const { count: yasajangCount } = await supabase
                 .from('businesses')
                 .select('id', { count: 'exact', head: true })
@@ -444,6 +435,7 @@ function AdminContent() {
     const pendingBizCount = realUsers.filter((u: any) => u.business_verify_status === 'pending').length;
     const totalNotifications = pendingAdsCount + pendingInquiriesCount + pendingPaymentsCount + pendingApplications + pendingBizCount + pendingYasajangCount;
 
+
     return (
         <div className="p-5 md:p-10 pb-20">
             <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
@@ -668,13 +660,6 @@ function AdminContent() {
             {/* Tab: Applications */}
             {activeTab === 'applications' && (
                 <AdminApplicationManagement fetchData={fetchData} />
-            )}
-
-            {/* Tab: Banner Slot Management */}
-            {activeTab === 'banner' && (
-                <AdminBannerManagement
-                    onCountChange={(count) => setPendingBannerCount(count)}
-                />
             )}
 
             {/* Tab: Yasajang Management */}
