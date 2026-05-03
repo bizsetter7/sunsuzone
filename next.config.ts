@@ -34,6 +34,13 @@ const nextConfig: NextConfig = {
         destination: 'https://www.sunsuzone.kr/:path*',
         permanent: true, // 301
       },
+      // [SEO-1E 2026-05-03] /coco/* → /sunsu/* 브랜드 URL 일치 (P2 코드 복붙 잔재 정리)
+      // 기존 GSC 색인된 /coco/ URL의 PageRank 보존을 위해 301 영구 리다이렉트
+      {
+        source: '/coco/:path*',
+        destination: '/sunsu/:path*',
+        permanent: true, // 301
+      },
     ];
   },
 };

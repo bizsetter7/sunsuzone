@@ -4,7 +4,7 @@
  * X(트위터) 등 SNS에서 한글 URL 인식 불가 문제 해결을 위한
  * 영문 단축 슬러그 → 한글 경로 리디렉트 시스템
  *
- * 사용법: sunsuzone.kr/go/gangnam-room → /coco/서울-강남구/호스트바선수
+ * 사용법: sunsuzone.kr/go/gangnam-room → /sunsu/서울-강남구/호스트바선수
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -14,113 +14,113 @@ import { NextRequest, NextResponse } from 'next/server';
 const SLUG_MAP: Record<string, string> = {
 
     // ── 서울 ──────────────────────────────────────────────────────────────────
-    'gangnam-room':     '/coco/서울-강남구/호스트바선수',
-    'gangnam-ten':      '/coco/서울-강남구/텐프로',
-    'gangnam-tencafe':  '/coco/서울-강남구/텐카페',
-    'gangnam-bar':      '/coco/서울-강남구/바알바',
-    'gangnam-jjumoh':   '/coco/서울-강남구/쩜오알바',
+    'gangnam-room':     '/sunsu/서울-강남구/호스트바선수',
+    'gangnam-ten':      '/sunsu/서울-강남구/텐프로',
+    'gangnam-tencafe':  '/sunsu/서울-강남구/텐카페',
+    'gangnam-bar':      '/sunsu/서울-강남구/바알바',
+    'gangnam-jjumoh':   '/sunsu/서울-강남구/쩜오알바',
 
-    'hongdae-room':     '/coco/서울-마포구/호스트바선수',
-    'hongdae-ten':      '/coco/서울-마포구/텐프로',
-    'hongdae-bar':      '/coco/서울-마포구/바알바',
+    'hongdae-room':     '/sunsu/서울-마포구/호스트바선수',
+    'hongdae-ten':      '/sunsu/서울-마포구/텐프로',
+    'hongdae-bar':      '/sunsu/서울-마포구/바알바',
 
-    'yeongdeungpo-room': '/coco/서울-영등포구/호스트바선수',
-    'yeongdeungpo-ten':  '/coco/서울-영등포구/텐프로',
+    'yeongdeungpo-room': '/sunsu/서울-영등포구/호스트바선수',
+    'yeongdeungpo-ten':  '/sunsu/서울-영등포구/텐프로',
 
-    'seoul-room':       '/coco/서울/호스트바선수',
-    'seoul-ten':        '/coco/서울/텐프로',
-    'seoul-bar':        '/coco/서울/바알바',
-    'seoul-tencafe':    '/coco/서울/텐카페',
-    'seoul-massage':    '/coco/서울/마사지',
+    'seoul-room':       '/sunsu/서울/호스트바선수',
+    'seoul-ten':        '/sunsu/서울/텐프로',
+    'seoul-bar':        '/sunsu/서울/바알바',
+    'seoul-tencafe':    '/sunsu/서울/텐카페',
+    'seoul-massage':    '/sunsu/서울/마사지',
 
     // ── 경기 ──────────────────────────────────────────────────────────────────
-    'suwon-room':       '/coco/경기-수원시/호스트바선수',
-    'suwon-ten':        '/coco/경기-수원시/텐프로',
-    'suwon-bar':        '/coco/경기-수원시/바알바',
-    'suwon-tencafe':    '/coco/경기-수원시/텐카페',
+    'suwon-room':       '/sunsu/경기-수원시/호스트바선수',
+    'suwon-ten':        '/sunsu/경기-수원시/텐프로',
+    'suwon-bar':        '/sunsu/경기-수원시/바알바',
+    'suwon-tencafe':    '/sunsu/경기-수원시/텐카페',
 
-    'bundang-room':     '/coco/경기-성남시/호스트바선수',
-    'bundang-ten':      '/coco/경기-성남시/텐프로',
-    'bundang-bar':      '/coco/경기-성남시/바알바',
+    'bundang-room':     '/sunsu/경기-성남시/호스트바선수',
+    'bundang-ten':      '/sunsu/경기-성남시/텐프로',
+    'bundang-bar':      '/sunsu/경기-성남시/바알바',
 
-    'bucheon-room':     '/coco/경기-부천시/호스트바선수',
-    'bucheon-ten':      '/coco/경기-부천시/텐프로',
+    'bucheon-room':     '/sunsu/경기-부천시/호스트바선수',
+    'bucheon-ten':      '/sunsu/경기-부천시/텐프로',
 
-    'gyeonggi-room':    '/coco/경기/호스트바선수',
-    'gyeonggi-ten':     '/coco/경기/텐프로',
-    'gyeonggi-bar':     '/coco/경기/바알바',
+    'gyeonggi-room':    '/sunsu/경기/호스트바선수',
+    'gyeonggi-ten':     '/sunsu/경기/텐프로',
+    'gyeonggi-bar':     '/sunsu/경기/바알바',
 
     // ── 인천 ──────────────────────────────────────────────────────────────────
-    'incheon-room':     '/coco/인천/호스트바선수',
-    'incheon-ten':      '/coco/인천/텐프로',
-    'incheon-bar':      '/coco/인천/바알바',
+    'incheon-room':     '/sunsu/인천/호스트바선수',
+    'incheon-ten':      '/sunsu/인천/텐프로',
+    'incheon-bar':      '/sunsu/인천/바알바',
 
     // ── 부산 ──────────────────────────────────────────────────────────────────
-    'busan-room':       '/coco/부산/호스트바선수',
-    'busan-ten':        '/coco/부산/텐프로',
-    'busan-bar':        '/coco/부산/바알바',
-    'busan-tencafe':    '/coco/부산/텐카페',
+    'busan-room':       '/sunsu/부산/호스트바선수',
+    'busan-ten':        '/sunsu/부산/텐프로',
+    'busan-bar':        '/sunsu/부산/바알바',
+    'busan-tencafe':    '/sunsu/부산/텐카페',
 
-    'seomyeon-room':    '/coco/부산-부산진구/호스트바선수',
-    'seomyeon-ten':     '/coco/부산-부산진구/텐프로',
-    'seomyeon-bar':     '/coco/부산-부산진구/바알바',
+    'seomyeon-room':    '/sunsu/부산-부산진구/호스트바선수',
+    'seomyeon-ten':     '/sunsu/부산-부산진구/텐프로',
+    'seomyeon-bar':     '/sunsu/부산-부산진구/바알바',
 
-    'haeundae-room':    '/coco/부산-해운대구/호스트바선수',
-    'haeundae-ten':     '/coco/부산-해운대구/텐프로',
+    'haeundae-room':    '/sunsu/부산-해운대구/호스트바선수',
+    'haeundae-ten':     '/sunsu/부산-해운대구/텐프로',
 
     // ── 대전 ──────────────────────────────────────────────────────────────────
-    'daejeon-room':     '/coco/대전/호스트바선수',
-    'daejeon-ten':      '/coco/대전/텐프로',
-    'daejeon-bar':      '/coco/대전/바알바',
+    'daejeon-room':     '/sunsu/대전/호스트바선수',
+    'daejeon-ten':      '/sunsu/대전/텐프로',
+    'daejeon-bar':      '/sunsu/대전/바알바',
 
-    'yuseong-room':     '/coco/대전-유성구/호스트바선수',
-    'yuseong-ten':      '/coco/대전-유성구/텐프로',
-    'yuseong-bar':      '/coco/대전-유성구/바알바',
-    'yuseong-jjumoh':   '/coco/대전-유성구/쩜오알바',
+    'yuseong-room':     '/sunsu/대전-유성구/호스트바선수',
+    'yuseong-ten':      '/sunsu/대전-유성구/텐프로',
+    'yuseong-bar':      '/sunsu/대전-유성구/바알바',
+    'yuseong-jjumoh':   '/sunsu/대전-유성구/쩜오알바',
 
     // ── 대구 ──────────────────────────────────────────────────────────────────
-    'daegu-room':       '/coco/대구/호스트바선수',
-    'daegu-ten':        '/coco/대구/텐프로',
-    'daegu-bar':        '/coco/대구/바알바',
+    'daegu-room':       '/sunsu/대구/호스트바선수',
+    'daegu-ten':        '/sunsu/대구/텐프로',
+    'daegu-bar':        '/sunsu/대구/바알바',
 
-    'suseong-room':     '/coco/대구-수성구/호스트바선수',
-    'suseong-ten':      '/coco/대구-수성구/텐프로',
+    'suseong-room':     '/sunsu/대구-수성구/호스트바선수',
+    'suseong-ten':      '/sunsu/대구-수성구/텐프로',
 
     // ── 광주 ──────────────────────────────────────────────────────────────────
-    'gwangju-room':     '/coco/광주/호스트바선수',
-    'gwangju-ten':      '/coco/광주/텐프로',
-    'gwangju-bar':      '/coco/광주/바알바',
+    'gwangju-room':     '/sunsu/광주/호스트바선수',
+    'gwangju-ten':      '/sunsu/광주/텐프로',
+    'gwangju-bar':      '/sunsu/광주/바알바',
 
-    'sangmu-room':      '/coco/광주-서구/호스트바선수',
-    'sangmu-ten':       '/coco/광주-서구/텐프로',
-    'sangmu-bar':       '/coco/광주-서구/바알바',
+    'sangmu-room':      '/sunsu/광주-서구/호스트바선수',
+    'sangmu-ten':       '/sunsu/광주-서구/텐프로',
+    'sangmu-bar':       '/sunsu/광주-서구/바알바',
 
     // ── 울산 ──────────────────────────────────────────────────────────────────
-    'ulsan-room':       '/coco/울산/호스트바선수',
-    'ulsan-ten':        '/coco/울산/텐프로',
-    'ulsan-bar':        '/coco/울산/바알바',
+    'ulsan-room':       '/sunsu/울산/호스트바선수',
+    'ulsan-ten':        '/sunsu/울산/텐프로',
+    'ulsan-bar':        '/sunsu/울산/바알바',
 
     // ── 충청 ──────────────────────────────────────────────────────────────────
-    'cheonan-room':     '/coco/충남-천안시/호스트바선수',
-    'cheonan-ten':      '/coco/충남-천안시/텐프로',
-    'cheonan-bar':      '/coco/충남-천안시/바알바',
+    'cheonan-room':     '/sunsu/충남-천안시/호스트바선수',
+    'cheonan-ten':      '/sunsu/충남-천안시/텐프로',
+    'cheonan-bar':      '/sunsu/충남-천안시/바알바',
 
-    'cheongju-room':    '/coco/충북-청주시/호스트바선수',
-    'cheongju-ten':     '/coco/충북-청주시/텐프로',
+    'cheongju-room':    '/sunsu/충북-청주시/호스트바선수',
+    'cheongju-ten':     '/sunsu/충북-청주시/텐프로',
 
     // ── 전라 ──────────────────────────────────────────────────────────────────
-    'jeonju-room':      '/coco/전북-전주시/호스트바선수',
-    'jeonju-ten':       '/coco/전북-전주시/텐프로',
-    'jeonju-bar':       '/coco/전북-전주시/바알바',
+    'jeonju-room':      '/sunsu/전북-전주시/호스트바선수',
+    'jeonju-ten':       '/sunsu/전북-전주시/텐프로',
+    'jeonju-bar':       '/sunsu/전북-전주시/바알바',
 
     // ── 전국 / 공통 ────────────────────────────────────────────────────────────
-    'room':             '/coco/서울/호스트바선수',
-    'ten':              '/coco/서울/텐프로',
-    'bar':              '/coco/서울/바알바',
-    'tencafe':          '/coco/서울/텐카페',
-    'massage':          '/coco/서울/마사지',
-    'jjumoh':           '/coco/서울/쩜오알바',
-    'karaoke':          '/coco/서울/노래주점',
+    'room':             '/sunsu/서울/호스트바선수',
+    'ten':              '/sunsu/서울/텐프로',
+    'bar':              '/sunsu/서울/바알바',
+    'tencafe':          '/sunsu/서울/텐카페',
+    'massage':          '/sunsu/서울/마사지',
+    'jjumoh':           '/sunsu/서울/쩜오알바',
+    'karaoke':          '/sunsu/서울/노래주점',
 };
 
 // ─── 리디렉터 ────────────────────────────────────────────────────────────────

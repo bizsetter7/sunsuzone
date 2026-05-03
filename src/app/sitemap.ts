@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 2. Region Pages (SEO Landing Pages) - High Priority
     // [Fix] slugify 적용 — generateStaticParams와 동일한 경로 생성
     const regionRoutes = seoRegionsMaster.map((region) => ({
-        url: `${baseUrl}/coco/${slugify(region.id)}`,
+        url: `${baseUrl}/sunsu/${slugify(region.id)}`,
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
         priority: 0.9,
@@ -65,7 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const regionSlug = cleanRegionSlug(shop.region || '');
             if (!regionSlug) return null; // 지역 없는 광고는 사이트맵 제외
             return {
-                url: `${baseUrl}/coco/${regionSlug}/${shop.id}`,
+                url: `${baseUrl}/sunsu/${regionSlug}/${shop.id}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.7,
@@ -73,11 +73,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         })
         .filter(Boolean) as MetadataRoute.Sitemap;
 
-    // 4-A. 지역×업종 가이드 랜딩 페이지 (예: /coco/서울/호스트바선수)
+    // 4-A. 지역×업종 가이드 랜딩 페이지 (예: /sunsu/서울/호스트바선수)
     // [Fix] shadowRegionsData 기준 사용 — generateStaticParams와 동일한 데이터소스
     const guideRoutes = shadowRegionsData.flatMap((region) =>
         WORK_TYPE_SLUGS.map((workType) => ({
-            url: `${baseUrl}/coco/${slugify(region.id)}/${workType}`,
+            url: `${baseUrl}/sunsu/${slugify(region.id)}/${workType}`,
             lastModified: new Date(),
             changeFrequency: 'monthly' as const,
             priority: 0.8,
