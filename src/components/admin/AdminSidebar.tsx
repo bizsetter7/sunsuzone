@@ -7,8 +7,6 @@ import {
     Settings,
     ShieldCheck,
     Zap,
-    Megaphone,
-    Twitter,
     CreditCard,
     XCircle,
     LogOut,
@@ -263,18 +261,6 @@ export const AdminSidebar = ({ activeTab, counts, onNavigate, className = '' }: 
                     onClick={() => handleNav('yasajang')}
                 />
                 <NavItem
-                    icon={<Megaphone size={20} />}
-                    label="마케팅 자동화"
-                    active={activeTab === 'marketing'}
-                    onClick={() => router.push('/admin/marketing')}
-                />
-                <NavItem
-                    icon={<Twitter size={20} className="text-sky-400" />}
-                    label="SNS 자동화"
-                    active={activeTab === 'sns'}
-                    onClick={() => router.push('/admin/sns')}
-                />
-                <NavItem
                     icon={<ShieldCheck size={20} className="text-emerald-500" />}
                     label="시스템 검증 센터"
                     active={activeTab === 'health'}
@@ -369,18 +355,6 @@ export const AdminMobileSidebar = ({ activeTab, counts, onNavigate, isOpen, onCl
                         active={activeTab === 'yasajang'}
                         badge={counts?.yasajang}
                         onClick={() => handleNav('yasajang')}
-                    />
-                    <NavItem
-                        icon={<Megaphone size={20} />}
-                        label="마케팅 자동화"
-                        active={activeTab === 'marketing'}
-                        onClick={() => router.push('/admin/marketing')}
-                    />
-                    <NavItem
-                        icon={<Twitter size={20} className="text-sky-400" />}
-                        label="SNS 자동화"
-                        active={activeTab === 'sns'}
-                        onClick={() => { router.push('/admin/sns'); onClose(); }}
                     />
                     <NavItem
                         icon={<ShieldCheck size={20} className="text-emerald-500" />}
