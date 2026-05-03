@@ -22,10 +22,8 @@ import { useSearchParams } from 'next/navigation';
 
 
 import { AdminInquiryManagement } from '@/components/admin/inquiry/AdminInquiryManagement';
-import { AdminMemberManagement } from '@/components/admin/member/AdminMemberManagement';
 import { AdminPaymentManagement } from '@/components/admin/payment/AdminPaymentManagement';
 import { AdminAdManagement } from '@/components/admin/ad/AdminAdManagement';
-import { BusinessVerifyView } from '@/components/admin/BusinessVerifyView';
 import { AdminApplicationManagement } from '@/components/admin/applications/AdminApplicationManagement';
 import { AdminYasajangManagement } from '@/components/admin/yasajang/AdminYasajangManagement';
 import { useBrand } from '@/components/BrandProvider';
@@ -621,16 +619,6 @@ function AdminContent() {
                 />
             )}
 
-            {/* Tab 3: User Management */}
-            {
-                activeTab === 'users' && (
-                    <AdminMemberManagement
-                        users={realUsers}
-                        mockUsers={mockUsers}
-                        fetchData={fetchData}
-                    />
-                )
-            }
             {/* Tab 4: Payment Management */}
             {
                 activeTab === 'payments' && (
@@ -653,10 +641,6 @@ function AdminContent() {
                     />
                 )
             }
-            {/* Tab 6: Business Verification */}
-            {activeTab === 'business' && (
-                <BusinessVerifyView />
-            )}
             {/* Tab: Applications */}
             {activeTab === 'applications' && (
                 <AdminApplicationManagement fetchData={fetchData} />
