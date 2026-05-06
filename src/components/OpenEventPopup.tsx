@@ -74,7 +74,7 @@ export default function OpenEventPopup() {
                         </span>
                     </div>
                     <h2 className="text-white font-black text-[18px] md:text-[22px] leading-tight tracking-tight">
-                        손님유입+선수+아가씨 모집
+                        손님유입+웨이터+선수 모집
                     </h2>
                     <p className="text-pink-400 font-black text-[22px] md:text-[28px] mt-1">월 88,000원으로</p>
                     <p className="text-white font-black text-[18px] md:text-[22px]">한 번에 해결!</p>
