@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     title: '이용가이드 - 선수존 (호스트바선수·노래방알바·남성유흥알바 초보 가이드)',
     description: '남성알바 구인구직 1위 선수존 이용 방법. 호스트바선수, 노래방알바, 남성유흥알바를 안전하고 현명하게 구하는 팁과 고객센터 이용 안내.',
     keywords: ['선수존가이드', '남성유흥알바가이드', '야간알바꿀팁', '초보알바가이드', '노래방알바팁', '호스트바선수팁'],
+    robots: { index: false, follow: false },
     alternates: {
         canonical: 'https://www.sunsuzone.kr/guide',
     },
